@@ -9,10 +9,10 @@ A collection of short examples, each showing how to use a particular feature of 
 ## Structure
 Each example may be found in its own folder within the asm folder.
 
-The examples are split into two types of file, .asm and .s. The .asm file is used to configure various settings for the Zeuss assembler and can largely be ignored. The .s files contain actual code. If I add more complex examples in the future, then these may include multiple .s files in order to logically group different parts of the codebase.
+The examples are split into two types of file, .asm and .s. The .asm file is used to configure various settings for the Zeus assembler and can largely be ignored. The .s files contain actual code. If I add more complex examples in the future, then these may include multiple .s files in order to logically group different parts of the codebase.
 
 ## Building The Examples
-All examples have been built using the command line version Simon Brattel's excellent Zeuss assembler (zcl.exe). They've been tested in CSpect and also on real hardware.
+All examples have been built using the command line version Simon Brattel's excellent Zeus assembler (zcl.exe). They've been tested in CSpect and also on real hardware.
 
 To build an example, open a console window, navigate to the folder of the particular example and type;
 
