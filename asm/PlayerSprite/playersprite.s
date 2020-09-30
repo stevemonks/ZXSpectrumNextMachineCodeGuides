@@ -24,7 +24,7 @@ PALETTE_SELECT_SPRITE_1  equ %00100000
 ; *****************************************************
 ; System initialisation
 ; *****************************************************
-    nextreg TURBO_MODE_PORT, $1                     ; $07 - cpu to 14 mhz
+    nextreg TURBO_MODE_PORT, $2                     ; $07 - cpu to 28 mhz because, why not?
 
 ; *****************************************************
 ; fill ULA attr with colour bars - this just gives
@@ -150,7 +150,7 @@ sprite_anim_counter: db 0                   ; storage for a counter that increme
 
 ControlSpriteKeyboard:
     ld bc,$dffe
-    in a,(bc)       ; read in [P][O][I][U][Y]
+    in a,(c)       ; read in [P][O][I][U][Y]
     and a,$02       ; O key - a = 0 if pressed
     sub a,1     
     ld a,d
@@ -158,7 +158,7 @@ ControlSpriteKeyboard:
     ld d,a
 
     ld bc,$bffe
-    in a,(bc)       ; read in [enter][L][K][J][H]
+    in a,(c)       ; read in [enter][L][K][J][H]
     and a,$04       ; k key - a = 0 if pressed
     sub a,1
     ld a,d
@@ -166,14 +166,14 @@ ControlSpriteKeyboard:
     ld d,a
 
     ld bc,$fefe
-    in a,(bc)       ; read [CAPS SHIFT][Z][X][C][V]
+    in a,(c)       ; read [CAPS SHIFT][Z][X][C][V]
     and a,$02       ; z key - a = 0 if pressed
     sub a,1
     ld a,e
     sbc a,0
     ld e,a
 
-    in a,(bc)       ; read [CAPS SHIFT][Z][X][C][V]
+    in a,(c)       ; read [CAPS SHIFT][Z][X][C][V]
     and a,$04       ; x key - a = 0 if pressed
     sub a,1
     ld a,e
