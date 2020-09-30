@@ -4,6 +4,7 @@ A collection of short examples, each showing how to use a particular feature of 
 ## Examples
 * SimpleSprite - this simply display a single 4 bit hardware sprite.
 * PlayerSprite - this expands on SimpleSprite by adding a simple two frame animation to the sprite and keyboard controls to move it around the screen.
+* PlayerSprite2 - this expands on PlayerSprite by using 16 bit coordinates for the x and y position of the sprite. This allows the sprite to move all the way across the visible portion of the screen. This example also uses a 9 bit RRRGGGBBB palette, unlike the previous examples which used an 8 bit RRRGGGBB palette.
 
 ## Structure
 Each example may be found in its own folder within the asm folder.
@@ -16,9 +17,9 @@ All examples have been built using the command line version Simon Brattel's exce
 To build an example, open a console window, navigate to the folder of the particular example and type;
 
 ```
-zcl <example name>.asm
+zcl zeuss.asm
 ```
-where ```<example name>``` is the name of the particular example you want to build. You will need to have ```zcl.exe``` available in you path.
+You will need to have ```zcl.exe``` available in you path.
 
 Prebuilt .snx files are also included for convenience. An .snx file is basically a renamed standard .sna file. For compatibility reasons, if the Next tries to load a .sna file it will disable its enhanced hardware, so features such as sprites wont work. .snx files allow the Next to identify that it is loading a Next specific file and therefore keep the enhanced features enabled.
 
