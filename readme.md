@@ -2,14 +2,18 @@
 A collection of short examples, each showing how to use a particular feature of the ZX Spectrum Next's hardware from Z80 assembler. The emphasis is on keeping the examples short, simple and hopefully easy to understand. All code is heavily annotated to explain what's going on at any point.
 
 ## Examples
+The examples are subdivided by their complexity, currently there are only "simple" examples illustrating how to use specific hardware features in a simplistic way.
+
+### Simple
 * SimpleSprite - this simply display a single 4 bit hardware sprite.
 * PlayerSprite - this expands on SimpleSprite by adding a simple two frame animation to the sprite and keyboard controls to move it around the screen.
 * PlayerSprite2 - this expands on PlayerSprite by using 16 bit coordinates for the x and y position of the sprite. This allows the sprite to move all the way across the visible portion of the screen. This example also uses a 9 bit RRRGGGBBB palette, unlike the previous examples which used an 8 bit RRRGGGBB palette.
+* SimpleTileMap - this example shows how to set up a 32x24 tilemap display including how to write tiles into it and how to scroll it around under keyboard control.
 
 ## Structure
-Each example may be found in its own folder within the asm folder.
+Each example may be found in its own folder within the parent folder.
 
-The examples are split into two types of file, .asm and .s. The .asm file is used to configure various settings for the Zeus assembler and can largely be ignored. The .s files contain actual code. If I add more complex examples in the future, then these may include multiple .s files in order to logically group different parts of the codebase.
+The examples are split into two types of file, .asm and .s. The .asm file is used to configure various settings for the Zeus assembler and can largely be ignored. The .s files contain actual code. More complex examples such as SimpleTileMap may include multiple .s files in order to logically group different parts of the codebase or pull external data into the assembled executable.
 
 ## Building The Examples
 All examples have been built using the command line version Simon Brattel's excellent Zeus assembler (zcl.exe). They've been tested in CSpect and also on real hardware.
@@ -17,7 +21,7 @@ All examples have been built using the command line version Simon Brattel's exce
 To build an example, open a console window, navigate to the folder of the particular example and type;
 
 ```
-zcl zeuss.asm
+zcl zeus.asm
 ```
 You will need to have ```zcl.exe``` available in you path.
 
