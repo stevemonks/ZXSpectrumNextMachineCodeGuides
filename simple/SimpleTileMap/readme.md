@@ -71,7 +71,7 @@ With all of the hardware configured it's time to fill the tilemap with some tile
 
 This tile set is visually laid out as follows;
 
-![the tile patterns included in this sample](tiles-overview.jpg)
+![the tile patterns included in this sample](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/simple/SimpleTileMap/tiles-overview.JPG?raw=true)
 
 As you can see, it's a grid of 4x4 tiles contained a set of different coloured "gems" and some shapes that could be used to make a simple maze. The tiles are numbered 0,1,2,3 for the top row, 4,5,6,7 for the 2nd row and so on.
 
