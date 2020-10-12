@@ -67,7 +67,7 @@ Similarly the vertical scrolling is set via TILEMAP_OFFSET_Y_PORT ($31). Vertica
 With the tilemap hardware all set up, we now need to load the palette. This is done in exactly the same way as for sprites, except we set the PALETTE_CONTROL_PORT ($43) to a value which selects the start of the tilemap palette.
 
 ## Displaying Some Tiles
-With all of the hardware configured it's time to fill the tilemap with some tiles. For a simple example we're going to be using the tile set defined by coloured_tiles.s. This was created using NextDes (available online [here](http://www.stevemonks.com/nextdes/) and the source data for use with the editor can be found in the src-assets folder.
+With all of the hardware configured it's time to fill the tilemap with some tiles. For a simple example we're going to be using the tile set defined by coloured_tiles.s. This was created using NextDes (available online [here](http://www.stevemonks.com/nextdes/)) and the source data for use with the editor can be found in the src-assets folder.
 
 This tile set is visually laid out as follows;
 

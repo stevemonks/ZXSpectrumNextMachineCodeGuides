@@ -28,3 +28,10 @@ You will need to have ```zcl.exe``` available in you path.
 Prebuilt .snx files are also included for convenience. An .snx file is basically a renamed standard .sna file. For compatibility reasons, if the Next tries to load a .sna file it will disable its enhanced hardware, so features such as sprites wont work. .snx files allow the Next to identify that it is loading a Next specific file and therefore keep the enhanced features enabled.
 
 At the time of writing, zcl.exe can't output the preferred .nex files, however zcltest.exe can, but it doesn't appear to generate runnable code if you attempt to build .snx files with it, so it shouldn't be used with the examples presented here.
+
+## Additional Tooling
+Assets used in these examples have been created with my online sprite and tile editor NextDes. Assets created with other tooling will work with these examples, but if you wish to edit the source assets you'll need to use NextDes, which can be found [here](http://www.stevemonks.com/nextdes/).
+
+Assets can be loaded into NextDes by dropping the source xml file onto the editor grid. Graphics can be created in 16 colours with 8 or 9 bit palettes and currently the editor supports editing images up to 128x128 pixels which can be exported as either sets of 16x16 pixel sprites, 8x8 pixel tiles or 8x8 pixel tiles grouped into 4x4 grids. Multiple frames can be added to make it easy to create and cut up large animated characters.
+
+The editor exports in asm format (.s files) which has the advantage that labels containing frame names are generated, making it easier to identify and link in frames within a sprite or tileset.
