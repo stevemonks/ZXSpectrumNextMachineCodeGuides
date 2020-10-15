@@ -124,6 +124,18 @@ The 2nd rectangle is drawn 16 tiles to the right of this location by adding 16x2
 
 The 3rd rectangle is drawn 12 rows down from the top of the tilemap. As the tilemap is 40 tiles wide and each tile is represented by two bytes, this is achieved by adding 40x12x2 to the start of the tile map data (tile_map_data).
 
+Each call passes in a different attribute value in the 'a' register. This value controls which palette the tiles will use by setting bits 4 to 7, effectively;
+
+```palette index * 16```
+
+It also controls the rotation and mirroring bits for the tiles to be filled. These are set by adding the predefined ROT_? labels to the palette index value, these are defined as follows;
+
+* ROT_NONE:   equ 0         ; no x-mirror, no y-mirror, no rotation
+* ROT_90:     equ %0010     ; no x-mirror, no y-mirror, rotation
+* ROT_180:    equ %1100     ; no x-mirror, y-mirror, no rotation
+* ROT_270:    equ %1110     ; x-mirror, y-mirror, rotation
+
+
 ## Scrolling Around
 Having drawn four coloured rectangles into the tile map and displayed them we are now going to scroll it around under keyboard control. This is described in the code as '"game" loop'.
 
