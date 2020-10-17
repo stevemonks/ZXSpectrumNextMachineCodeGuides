@@ -1,0 +1,21 @@
+[WLANSD]
+ID=id_of_this_lan
+DHCP_Enabled=YES
+
+[Vendor]
+CIPATH=/DCIM/100__TSB/FA000001.JPG
+APPMODE=5
+APPNETWORKKEY=<your WIFI AP password - will automatically be replaced with asterisks once configured>
+VERSION=F15DBW3BW4.00.04
+CID=02544d535733324755e125827b011701
+PRODUCT=FlashAir
+APPSSID=<your WIFI AP SSID - will automatically be replaced with asterisks once configured>
+LOCK=1
+APPAUTOTIME=0
+MASTERCODE=<MAC address printed on back of FlashAir card>
+
+UPLOAD=1
+UPDIR=/
+WEBDAV=2
+APPNAME=id_of_this_drive
+
