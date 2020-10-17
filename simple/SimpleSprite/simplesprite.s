@@ -122,6 +122,10 @@ SpritePaletteLoop:
     djnz SpritePaletteLoop
 
 
+    ; enable interrupts before entering main loop. Unless we do this
+    ; the halt instruction will wait forever.
+    ei
+
 ; *****************************************************
 ; "game" loop
 ; *****************************************************

@@ -101,6 +101,10 @@ SpritePaletteLoop:
     djnz SpritePaletteLoop
 
 
+    ; enable interrupts before entering main loop. Unless we do this
+    ; the halt instruction will wait forever.
+    ei
+
 ; *****************************************************
 ; "game" loop
 ; *****************************************************
@@ -110,7 +114,6 @@ MainLoop:
     ; and these start at the beginning of each frame, so this is really simple
     ; way to synchronise your game loop with the V-Sync of the display.
     halt
-
     ld de,(sprite_x)                        ; load the current sprite position into de
     call ControlSpriteKeyboard              ; adjust the values in d and e if keys are pressed
     ld (sprite_x),de                        ; save the modified sprite position back to memory for next frame

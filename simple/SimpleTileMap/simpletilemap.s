@@ -184,6 +184,10 @@ clearTilemapLoop:
     ld c,8
     call DrawTileRect
 
+    ; enable interrupts before entering main loop. Unless we do this
+    ; the halt instruction will wait forever.
+    ei
+
 ; *****************************************************
 ; "game" loop
 ; *****************************************************

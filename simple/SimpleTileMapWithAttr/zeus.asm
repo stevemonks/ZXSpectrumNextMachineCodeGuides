@@ -3,7 +3,7 @@
 
 AppFilename             equ "simpletilemapwithattr"     ; What we're called (for file generation)
 
-AppFirst                equ $6000                       ; First byte of code (uncontended memory)
+AppFirst                equ $6000                       ; First byte of code
 
                         zeusemulate "Next","RAW"        ; Set the model
 
@@ -47,8 +47,14 @@ Zeus_SP                 equ $FF40                               ; Tell the emula
 
 ; These generate some output files
 
-
-; Output an snx file. This is essentially a SNA or Snapshot file, a standard Spectrum archive format.
-; Attempting to load one of these on a ZX Spectrum Next disables all of the enhanced Next hardware
-; to aid with compatibility, but using the SNX extension enables the Next's advanced hardware.
+if zeusver >= 78
+; for versions of Zeus that support it, output a .nex file as this is the preferred
+; format for the Next.
+                        output_nex AppFilename+".nex",Zeus_SP,Zeus_PC
+else
+; If using an older version output an snx file. This is essentially a SNA or Snapshot file,
+; a standard Spectrum archive format. Attempting to load one of these on a ZX Spectrum Next
+; disables all of the enhanced Next hardware to aid with compatibility, but using the SNX
+; extension enables the Next's advanced hardware.
                         output_sna AppFilename+".snx"
+endif

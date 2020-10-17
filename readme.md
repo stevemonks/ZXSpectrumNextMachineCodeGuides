@@ -28,7 +28,7 @@ You will need to have ```zcl.exe``` available in you path.
 
 Prebuilt .snx files are also included for convenience. An .snx file is basically a renamed standard .sna file. For compatibility reasons, if the Next tries to load a .sna file it will disable its enhanced hardware, so features such as sprites wont work. .snx files allow the Next to identify that it is loading a Next specific file and therefore keep the enhanced features enabled.
 
-At the time of writing, zcl.exe can't output the preferred .nex files, however zcltest.exe can, but it doesn't appear to generate runnable code if you attempt to build .snx files with it, so it shouldn't be used with the examples presented here.
+At the time of writing, zcl.exe can't output the preferred .nex files, however zcltest.exe can and the examples here will generate a .nex file if built with this, or later variants of zeus.
 
 ## Additional Tooling
 Assets used in these examples have been created with my online sprite and tile editor NextDes. Assets created with other tooling will work with these examples, but if you wish to edit the source assets you'll need to use NextDes, which can be found [here](http://www.stevemonks.com/nextdes/).

@@ -201,6 +201,11 @@ clearTilemapLoop:
     ld hl,tile_map_data + 16*2 + 12*ROW_LEN  ; start 16 tiles from the left and 12 tiles down from the top
     call DrawTileRectWithAttr
 
+
+    ; enable interrupts before entering main loop. Unless we do this
+    ; the halt instruction will wait forever.
+    ei
+
 ; *****************************************************
 ; "game" loop
 ; *****************************************************
