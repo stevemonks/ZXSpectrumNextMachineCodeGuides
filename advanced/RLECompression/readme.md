@@ -80,7 +80,7 @@ This basically, invokes the RLE decompressor (found in rle.s), decompressing the
 
 When run on a Next it should look like this;
 <!--![](next-screenshot.png)-->
-![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/next-screenshot.JPG?raw=true)
+![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/next-screenshot.png?raw=true)
 
 ## RLE Encoding
 RLE encoding works by identifying sequences of repeating bytes and replacing them with two bytes, a count and a single byte indicating what to repeat. If we consider the maze example above, the top row is comprised of 32 repeating tiles of tile index 1, so we could replace this with;
