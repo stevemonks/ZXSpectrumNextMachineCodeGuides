@@ -5,7 +5,7 @@ RLE compression is a simple compression scheme that is quite easy to understand 
 
 This example provides an end to end demonstration of how to take a tile map designed in the free TileEd software (https://www.mapeditor.org/), extract the tile layer, compress it, convert it into a format that can be included into assembler source and then decompress it into a tilemap that the Next can render.
 
-The tiles themselves were created with NextDes (www.stevemonks.com/NextDes/).
+The tiles themselves were created with NextDes (www.stevemonks.com/nextdes/).
 
 ## Repository Layout - what's what
 The repository is split up into several directories;
