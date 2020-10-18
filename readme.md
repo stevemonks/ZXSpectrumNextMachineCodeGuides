@@ -12,7 +12,7 @@ The examples are subdivided by their complexity, currently there are only "simpl
 * SimpleTileMapWithAttr - this example shows how to set up a 32x24 tilemap display simultaneously using multiple palettes and controlling the mirror and rotation features of different tiles, it also includes how to write individual tiles into the map and how to scroll it around under keyboard control.
 
 ### Advanced
-* RLECompression - this is a complete end to end example illustrating how to take a tile map created in the free TileEd tool, convert it into a RLE compressed format that can be built into a Next executable and unpack and display it on the Next.
+* RLECompression - this is a complete end to end example illustrating a method of how to take a tile map created in the free TileEd tool, convert it into a RLE compressed format that can be built into a Next executable then unpack and display it on the Next.
 
 ## Structure
 Each example may be found in its own folder within the parent folder.
