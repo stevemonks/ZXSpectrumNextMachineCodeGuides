@@ -30,23 +30,25 @@ The repository is split up into several directories;
 
 ## The Source Data
 You should be able to open the source data in TileEd by loading src-assets\example_map.tmx into TileEd. Once open it should look like this;
-![](tiled-image.JPG)
+<!--![](tiled-image.JPG)-->
 ![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/tiled-image.JPG?raw=true)
 Describing how to use TileEd is beyond the scope of this guide, but it is relatively simple to use and also quite powerful, I've used it in a number of commercial projects including Alien Breed Mobile (Team17), Playtime Island (BBC), Bomb Bunny Boogie (Digital Application Design) as well as Galaxy of Error on the Next.
 
 The tiles were created in NextDes (www.stevemonks.com/nextdes/) and they can be edited on that website by dropping the file src-assets\maze_tiles.json onto the editing area of the NextDes screen. it should look like this; 
-![](nextdes-screenshot.JPG)
+<!--![](nextdes-screenshot.JPG)-->
 ![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/nextdes-screenshot.JPG?raw=true)
 
 The "Download PNG" button was used to create the maze_tiles.png file used by TileEd to create and display the tile set. Updated tile pattern and tile palette source can be downloaded by hitting the "Export" button and any changes saved to a new JSON file by hitting the "Save" button.
 
 ## Using The Compressor
 If you double click on ```mapconvert.html``` it _should_ open in Chrome (on Windows) presenting this super simple UI. I haven't tested this on a Mac yet, will update when I have. What you should see is this;
-![](map-convert-before.jpg)
+
+<!--![](map-convert-before.jpg)-->
 ![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/map-convert-before.JPG?raw=true)
 
 If you drag and drop the file ```example_map.json``` onto where it says "Drop Stuff Here", it should change to this;
-![](map-convert-after.jpg)
+
+<!--![](map-convert-after.jpg)-->
 ![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/map-convert-after.JPG?raw=true)
 
 and attempt to download example_map.s to your computer (you may need to give it permission to do this). In some instances, downloading to a .s file and including that in the assembler source can be the most convenient way to work, but when I was putting together Galaxy of Error I found it simpler to cut and past the output text from the web page into a single .s file containing all of the maps that was already being built as part of the project.
@@ -77,7 +79,7 @@ As mentioned above, the Next code is essential the SimpleTilemap sample with a f
 This basically, invokes the RLE decompressor (found in rle.s), decompressing the RLE data found at example_map_map+2 (+2 to skip the width and height of the tilemap that the compressor code prefixes the RLE data with) directly into the tilemap buffer the hardware has been set up to display (tile_map_data - see zeus.asm for where this is declared).
 
 When run on a Next it should look like this;
-![](next-screenshot.png)
+<!--![](next-screenshot.png)-->
 ![](https://github.com/stevemonks/ZXSpectrumNextMachineCodeGuides/blob/master/advanced/RLECompression/next-screenshot.JPG?raw=true)
 
 ## RLE Encoding
