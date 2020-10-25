@@ -10,6 +10,7 @@ The examples are subdivided by their complexity, currently there are only "simpl
 * PlayerSprite2 - this expands on PlayerSprite by using 16 bit coordinates for the x and y position of the sprite. This allows the sprite to move all the way across the visible portion of the screen. This example also uses a 9 bit RRRGGGBBB palette, unlike the previous examples which used an 8 bit RRRGGGBB palette.
 * SimpleTileMap - this example shows how to set up a 32x24 tilemap display including how to write tiles into it and how to scroll it around under keyboard control.
 * SimpleTileMapWithAttr - this example shows how to set up a 32x24 tilemap display simultaneously using multiple palettes and controlling the mirror and rotation features of different tiles, it also includes how to write individual tiles into the map and how to scroll it around under keyboard control.
+* SimpleLayer2 - an example of how to control and draw to Layer 2, demonstrated by first filling the Layer 2 buffer with all of the palette colours and then drawing some coloured text over the top of it. Includes bespoke code to draw bitmap text into Layer 2 along with some technical description about memory paging and optimisation techniques used in the character draw function.
 
 ### Advanced
 * RLECompression - this is a complete end to end example illustrating a method of how to take a tile map created in the free TileEd tool, convert it into a RLE compressed format that can be built into a Next executable then unpack and display it on the Next.
